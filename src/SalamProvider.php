@@ -14,8 +14,8 @@ class SalamProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/Layouts' => $this->app->resourcePath('views/vendor/salam'),
-            __DIR__.'/Public' => public_path('vendor/salam/')
+            __DIR__.'/Publish/Layouts' => $this->app->resourcePath('views/vendor/salam'),
+            __DIR__.'/Publish/Public' => public_path('vendor/salam/')
         ]);
     }    
     
