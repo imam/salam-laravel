@@ -1,0 +1,26 @@
+{
+    "name": "imam/salam",
+    "description": "Simple admin generator",
+    "authors": [
+        {
+            "name": "Imam Assidiqqi",
+            "email": "assidiqqi.imam@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Imam\\Salam\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "^8.31",
+        "php": "^7.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Imam\\Salam\\SalamProvider"
+            ]
+        }
+    }
+}
