@@ -2,7 +2,9 @@
 
 namespace Imam\Salam;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
+use Inertia\Inertia;
 
 class SalamProvider extends ServiceProvider
 {
@@ -15,7 +17,7 @@ class SalamProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/Publish/Layouts' => $this->app->resourcePath('views/vendor/salam'),
-            __DIR__.'/Publish/Public' => public_path('vendor/salam/')
+            __DIR__.'/Publish/Public' => public_path('vendor/salam/'),
         ]);
     }    
     
@@ -26,5 +28,9 @@ class SalamProvider extends ServiceProvider
     */
     public function register()
     {
+        Inertia::share('current_user', fn (Request $request) => $request->user()
+            ? $request->user()
+            : null
+        );
     }
 }

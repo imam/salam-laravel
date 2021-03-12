@@ -11,8 +11,7 @@
 
   <title>SIAP</title>
 
-  <link href="css/app.css" rel="stylesheet">
-  <link rel="stylesheet" href="/public/salam/css/adminkit.cs">
+  <link href="/vendor/salam/adminkit/css/app.css" rel="stylesheet">
   <link rel="stylesheet" href="{{mix('css/adminkit.css')}}">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <script src="{{ mix('js/app.js') }}" defer></script>
